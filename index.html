@@ -13,7 +13,13 @@
       <p v-html="websiteTag"></p>
       <input type="text" v-bind:value="job" />
       <p>Name: {{ name }}</p>
-      <p>Job: {{ job }}</p>
+      <button v-on:click="addYear(1)">Add a Year</button>
+      <button @click="age--">Subtract a Year</button>
+      <br>
+      <button v-on:dblclick="addYear(10)">Add 10 Years</button>
+      <button v-on:dblclick="age-=10">Subtract 10 Years</button>
+      <p>Age: {{ age }}</p>
+      <div id="canvas" v-on:mousemove="updateXY">{{ x }},{{ y }}</div>
     </div>
     <script src="app.js"></script>
   </body>
