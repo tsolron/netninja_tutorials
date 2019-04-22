@@ -9,9 +9,12 @@
   <body>
     <div id="vue-app">
       <label>Name:</label>
-      <input type="text" v-on:keyup.enter="logName" />
+      <input type="text" v-model="name" />
+      <span>{{ name }}</span>
+      <br>
       <label>Age:</label>
-      <input type="text" v-on:keyup.ctrl.enter="logAge" />
+      <input type="text" v-model="age" />
+      <span>{{ age }}</span>
       <!--<h1>{{ greet('night') }}</h1>
       <a v-bind:href="website">Tsolron's website</a><br>
       <p v-html="websiteTag"></p>

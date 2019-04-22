@@ -1,13 +1,13 @@
 new Vue({
   el: '#vue-app',
   data: {
-    name: 'Graham',
-    job: 'Gamer',
+    name: '',
+    age: '',
+    /*job: 'Gamer',
     website: 'http://www.tsolron.com',
     websiteTag: '<a href="http://www.tsolron.com">Tsolron\'s website alternate method</a>',
-    age: 26,
     x: 0,
-    y: 0
+    y: 0*/
   },
   methods: {
     logName: function() {
@@ -16,7 +16,7 @@ new Vue({
     logAge: function() {
       console.log('you entered your age')
     },
-    greet: function(time) {
+    /*greet: function(time) {
       return 'Good ' + time + ' ' + this.name;
     },
     addYear: function(years) {
@@ -29,6 +29,6 @@ new Vue({
     },
     click: function() {
       alert('clicked me');
-    }
+    }*/
   }
 });
