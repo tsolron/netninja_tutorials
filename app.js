@@ -10,6 +10,12 @@ new Vue({
     y: 0
   },
   methods: {
+    logName: function() {
+      console.log('you entered your name')
+    },
+    logAge: function() {
+      console.log('you entered your age')
+    },
     greet: function(time) {
       return 'Good ' + time + ' ' + this.name;
     },

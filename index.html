@@ -8,7 +8,11 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>{{ greet('night') }}</h1>
+      <label>Name:</label>
+      <input type="text" v-on:keyup.enter="logName" />
+      <label>Age:</label>
+      <input type="text" v-on:keyup.ctrl.enter="logAge" />
+      <!--<h1>{{ greet('night') }}</h1>
       <a v-bind:href="website">Tsolron's website</a><br>
       <p v-html="websiteTag"></p>
       <input type="text" v-bind:value="job" />
@@ -21,6 +25,7 @@
       <p>Age: {{ age }}</p>
       <div id="canvas" v-on:mousemove="updateXY">{{ x }},{{ y }}</div>
       <a v-on:click.prevent="click" href="http://www.google.com/">Google (I don't work)</a>
+      -->
     </div>
     <script src="app.js"></script>
   </body>
