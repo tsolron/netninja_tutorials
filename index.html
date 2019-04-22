@@ -9,6 +9,9 @@
   <body>
     <div id="vue-app">
       <h1>{{ greet('night') }}</h1>
+      <a v-bind:href="website">Tsolron's website</a><br>
+      <p v-html="websiteTag"></p>
+      <input type="text" v-bind:value="job" />
       <p>Name: {{ name }}</p>
       <p>Job: {{ job }}</p>
     </div>
