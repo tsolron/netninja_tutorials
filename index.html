@@ -13,13 +13,14 @@
       <p v-html="websiteTag"></p>
       <input type="text" v-bind:value="job" />
       <p>Name: {{ name }}</p>
-      <button v-on:click="addYear(1)">Add a Year</button>
+      <button v-on:click.once="addYear(1)">Add a Year (only once)</button>
       <button @click="age--">Subtract a Year</button>
       <br>
       <button v-on:dblclick="addYear(10)">Add 10 Years</button>
       <button v-on:dblclick="age-=10">Subtract 10 Years</button>
       <p>Age: {{ age }}</p>
       <div id="canvas" v-on:mousemove="updateXY">{{ x }},{{ y }}</div>
+      <a v-on:click.prevent="click" href="http://www.google.com/">Google (I don't work)</a>
     </div>
     <script src="app.js"></script>
   </body>
