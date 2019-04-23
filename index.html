@@ -4,17 +4,26 @@
     <meta charset="utf-8">
     <title>VueJS Tutorials</title>
     <link href="styles.css" ref="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <script src="vue.js"></script>
   </head>
   <body>
     <div id="vue-app">
-      <label>Name:</label>
+      <button @click="a++">Add to A</button>
+      <button @click="b++">Add to B</button>
+      <button @click="age++">Add to Age</button>
+      <button @click="mounted()">Start counting</button>
+      <p>A - {{ a }}</p>
+      <p>B - {{ b }}</p>
+      <p>Age + A = {{ addToA }}</p>
+      <p>Age + B = {{ addToB }}</p>
+      <!--<label>Name:</label>
       <input type="text" v-model="name" />
       <span>{{ name }}</span>
       <br>
       <label>Age:</label>
       <input type="text" v-model="age" />
-      <span>{{ age }}</span>
+      <span>{{ age }}</span>-->
       <!--<h1>{{ greet('night') }}</h1>
       <a v-bind:href="website">Tsolron's website</a><br>
       <p v-html="websiteTag"></p>

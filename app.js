@@ -1,8 +1,10 @@
 new Vue({
   el: '#vue-app',
   data: {
-    name: '',
-    age: '',
+    age: 26,
+    a: 0,
+    b: 0
+    //name: '',
     /*job: 'Gamer',
     website: 'http://www.tsolron.com',
     websiteTag: '<a href="http://www.tsolron.com">Tsolron\'s website alternate method</a>',
@@ -10,12 +12,20 @@ new Vue({
     y: 0*/
   },
   methods: {
-    logName: function() {
+    mounted: function () {
+      window.setInterval(() => {
+        this.countUp();
+      },1000);
+    },
+    countUp: function() {
+      this.a++;
+    }
+    /*logName: function() {
       console.log('you entered your name')
     },
     logAge: function() {
       console.log('you entered your age')
-    },
+    },*/
     /*greet: function(time) {
       return 'Good ' + time + ' ' + this.name;
     },
@@ -30,5 +40,13 @@ new Vue({
     click: function() {
       alert('clicked me');
     }*/
+  },
+  computed: {
+    addToA: function() {
+      return this.a + this.age;
+    },
+    addToB: function() {
+      return this.b + this.age;
+    },
   }
 });
