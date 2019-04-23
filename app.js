@@ -48,5 +48,8 @@ new Vue({
     addToB: function() {
       return this.b + this.age;
     },
+    testMath: function() {
+      return math.multiply(this.a,this.b);
+    }
   }
 });
