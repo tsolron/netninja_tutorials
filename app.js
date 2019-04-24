@@ -4,8 +4,12 @@ new Vue({
     age: 26,
     a: 0,
     b: 0,
-    error: false,
-    success: false
+    games: ['metroid', 'zelda', 'mario', 'other'],
+    objlist: [
+      { name: 'First', age: 101 },
+      { name: 'Second', age: 202 },
+      { name: 'Third', age: 303 }
+    ]
   },
   methods: {
     mounted: function () {

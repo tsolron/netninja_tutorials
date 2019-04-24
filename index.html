@@ -19,15 +19,25 @@
       <p>Age + A = {{ addToA }}</p>
       <p>Age + B = {{ addToB }}</p>
       <p>Math: {{ testMath }}</p>
-      <button v-on:click="error = !error">Toggle Error</button>
-      <button v-on:click="success = !success">Toggle Success</button>
-      <p v-if="error">Error is true</p>
-      <p v-else-if="success">Success is true</p>
-      <br>
-      <!--Similar to above, but just hides the p's instead of removing from dom-->
-      <p v-show="error">Error message 2</p>
-      <p v-show="success">Success message 2</p>
-      <p></p>
+
+      <ul>
+        <li v-for="game in games">{{ game }}</li>
+      </ul>
+
+      <ul>
+        <li v-for="(obj, index) in objlist">Index({{ index }}) {{ obj.name }} - {{ obj.age }}</li>
+      </ul>
+
+      <template v-for="(obj, index) in objlist">
+        <h3>{{ index }} . {{ obj.name }}</h3>
+        <p>{{ obj.age }}</p>
+      </template>
+
+      <template v-for="obj in objlist">
+        <div v-for="(val,key) in obj">
+          <p>{{ key }} : {{ val }}</p>
+        </div>
+      </template>
 
     </div>
     <script src="app.js"></script>
