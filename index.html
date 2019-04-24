@@ -19,37 +19,16 @@
       <p>Age + A = {{ addToA }}</p>
       <p>Age + B = {{ addToB }}</p>
       <p>Math: {{ testMath }}</p>
-      <div v-on:click="available = !available" v-bind:class="{available: available}">
-        <span>Testing Dynamic CSS</span>
-      </div>
+      <button v-on:click="error = !error">Toggle Error</button>
+      <button v-on:click="success = !success">Toggle Success</button>
+      <p v-if="error">Error is true</p>
+      <p v-else-if="success">Success is true</p>
       <br>
-      <button v-on:click="nearby = !nearby">Toggle Nearby</button>
-      <button v-on:click="available = !available">Toggle Available</button>
-      <div v-bind:class="compClasses" style="background: red">
-        <span>Second example</span>
-      </div>
+      <!--Similar to above, but just hides the p's instead of removing from dom-->
+      <p v-show="error">Error message 2</p>
+      <p v-show="success">Success message 2</p>
+      <p></p>
 
-      <!--<label>Name:</label>
-      <input type="text" v-model="name" />
-      <span>{{ name }}</span>
-      <br>
-      <label>Age:</label>
-      <input type="text" v-model="age" />
-      <span>{{ age }}</span>-->
-      <!--<h1>{{ greet('night') }}</h1>
-      <a v-bind:href="website">Tsolron's website</a><br>
-      <p v-html="websiteTag"></p>
-      <input type="text" v-bind:value="job" />
-      <p>Name: {{ name }}</p>
-      <button v-on:click.once="addYear(1)">Add a Year (only once)</button>
-      <button @click="age--">Subtract a Year</button>
-      <br>
-      <button v-on:dblclick="addYear(10)">Add 10 Years</button>
-      <button v-on:dblclick="age-=10">Subtract 10 Years</button>
-      <p>Age: {{ age }}</p>
-      <div id="canvas" v-on:mousemove="updateXY">{{ x }},{{ y }}</div>
-      <a v-on:click.prevent="click" href="http://www.google.com/">Google (I don't work)</a>
-      -->
     </div>
     <script src="app.js"></script>
   </body>
