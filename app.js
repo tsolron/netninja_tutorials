@@ -3,7 +3,9 @@ new Vue({
   data: {
     age: 26,
     a: 0,
-    b: 0
+    b: 0,
+    available: false,
+    nearby: false
     //name: '',
     /*job: 'Gamer',
     website: 'http://www.tsolron.com',
@@ -50,6 +52,12 @@ new Vue({
     },
     testMath: function() {
       return math.multiply(this.a,this.b);
+    },
+    compClasses: function() {
+      return {
+        available: this.available,
+        nearby: this.nearby
+      }
     }
   }
 });
