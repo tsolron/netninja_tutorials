@@ -21,3 +21,32 @@ span{
   content: "nearby";
   margin-left: 10px;
 }
+
+#box{
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  background: url(/img/green_box.png) center no-repeat;
+  background-size: 80%;
+}
+
+#box.red{
+  background: url(/img/red_box.png) center no-repeat;
+  background-size: 80%;
+}
+
+#box-health{
+  width: 200px;
+  border: 2px solid #000;
+  margin: 0 auto 20px auto;
+}
+
+#box-health div{
+  height: 20px;
+  background: crimson;
+}
+
+#controls{
+  width: 120px;
+  margin: 0 auto;
+}

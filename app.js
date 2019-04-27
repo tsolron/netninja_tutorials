@@ -1,35 +1,22 @@
 new Vue({
   el: '#vue-app',
   data: {
-    age: 26,
-    a: 0,
-    b: 0,
-    games: ['metroid', 'zelda', 'mario', 'other'],
-    objlist: [
-      { name: 'First', age: 101 },
-      { name: 'Second', age: 202 },
-      { name: 'Third', age: 303 }
-    ]
+    health: 100,
+    ended: false
   },
   methods: {
-    mounted: function () {
-      window.setInterval(() => {
-        this.countUp();
-      },1000);
+    hit: function() {
+      this.health -= 10;
+      if (this.health <= 0) {
+        this.ended = true;
+      }
     },
-    countUp: function() {
-      this.a++;
+    restart: function() {
+      this.health = 100;
+      this.ended = false;
     }
   },
   computed: {
-    addToA: function() {
-      return this.a + this.age;
-    },
-    addToB: function() {
-      return this.b + this.age;
-    },
-    testMath: function() {
-      return math.multiply(this.a,this.b);
-    }
+
   }
 });
