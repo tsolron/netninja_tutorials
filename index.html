@@ -11,12 +11,10 @@
   <body>
     <div id="vue-app-one">
       <h2>Vue One</h2>
-      <greeting></greeting>
-    </div>
-
-    <div id="vue-app-two">
-      <h2>Vue Two</h2>
-      <greeting></greeting>
+      <input type="text" ref="input" />
+      <button v-on:click="readRefs()">Submit</button>
+      <p>Food: {{ output }}</p>
+      <div ref="other">Other Reference</div>
     </div>
     <script src="app.js"></script>
   </body>
