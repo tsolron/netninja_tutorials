@@ -6,22 +6,17 @@
     <link href="styles.css" rel="stylesheet" type="text/css" ref="stylesheet" />
     <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
     <script src="vue.js"></script>
-    <!--<script src="math.js" type="text/javascript"></script>-->
+    <!--<script src="math.js"></script>-->
   </head>
   <body>
-    <div id="vue-app">
-
-      <div id="box" v-bind:class="{red: ended}"></div>
-
-      <div id="box-health">
-        <div v-bind:style="{width: health + '%'}"></div>
-      </div>
-
-      <div id="controls">
-        <button @click="hit()" v-show="!ended">Hit</button>
-        <button @click="restart()">Restart</button>
-      </div>
-
+    <div id="vue-app-one">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+    </div>
+    <div id="vue-app-two">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+      <button v-on:click="changeTitleOfOne">Change App One Title</button>
     </div>
     <script src="app.js"></script>
   </body>
